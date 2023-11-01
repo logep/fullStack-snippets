@@ -6,6 +6,7 @@
     { "src": "rust/", "use": "@vercel/rust" }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "/angular/(.*)",
       "dest": "/angular/$1"
