@@ -1,27 +1,12 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "angular/", "use": "@vercel/node" },
-    { "src": "react/", "use": "@vercel/node" },
-    { "src": "vue/", "use": "@vercel/node" },
-    { "src": "rust/", "use": "@vercel/rust" }
+    { "src": "vue/", "use": "@vercel/node" }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/angular/(.*)",
-      "dest": "/angular/$1"
-    },
-    {
-      "src": "/react/(.*)",
-      "dest": "/react/$1"
-    },
     {
       "src": "/vue/(.*)",
       "dest": "/vue/$1"
-    },
-    {
-      "src": "/rust/(.*)",
-      "dest": "/rust/$1"
     }
   ]
 }
